@@ -1,7 +1,11 @@
 import express from "express";
 import Product from "../models/productModels.js";
+import {
+  getProducts,
+  getProductById,
+} from "../controllers/productController.js";
 
-const router = express.Router();
+const router = express.Router(); // ✅ Khai báo router
 
 // Lấy danh sách sản phẩm
 router.get("/", async (req, res) => {
